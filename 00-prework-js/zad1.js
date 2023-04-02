@@ -26,4 +26,4 @@ people.push(myself)
 
 // moje dane
 let mydata = people[people.length - 1]
-console.log(mydata)
+console.log(mydata.name)
