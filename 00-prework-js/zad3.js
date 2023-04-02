@@ -19,4 +19,14 @@ const products = [
 
 let cena = products.filter(p => p.category == 'fruits').reduce((sum, cur) => sum + cur.price, 0);
 
+
+// za pomoca pentli
+suma = 0;
+for (const p of products) {
+    if (p.category == 'fruits') {
+        suma += p.price
+    }
+}
+console.log(suma)
+
 console.log(cena)
