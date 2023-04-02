@@ -29,6 +29,9 @@ function getOldest(array) {
     }
     return oldest;
 }
+let sorted = people.sort((a, b) => a.age - b.age)
+let maxwiek = sorted[people.length - 1]
+console.log(maxwiek)
 
 let oldest = getOldest(people)
 console.log(oldest)
