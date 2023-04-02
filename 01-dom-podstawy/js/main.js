@@ -1,31 +1,54 @@
-console.log('main')
-let el = document.querySelector('#butid')
 
-console.log(el.innerText)
+// Eventy
 
-let form = document.querySelector('form')
-form.classList.add('my-form')
+// Glowne Eventy:
 
-// --zad 3
+// click
+// submit
+
+// Wzor eventu
+
+// const handleTitleClick = () => {
+//   console.log('h1 zostal klikniety');
+// }
+
+// title.addEventListener('click', handleTitleClick);
 
 
-let inputs = document.querySelectorAll("input")
-inputs[0].value = "nowytext"
-inputs[1].value = "drugi nowy text"
-const messages = [
-    {
-        author: 'Pawel',
-        message: 'Ale dzisiaj super dzien'
-    },
-    {
-        author: "Magda",
-        message: "Zimno jest"
-    }
-]
-let list = document.querySelector('ul')
-for (m of messages) {
-    list.innerHTML += `<ul>${m.author}</ul>`
+const messageForm = document.querySelector('#messageForm');
+const nameInput = document.querySelector('#nameInput');
+const messageInput = document.querySelector('#messageInput');
+let list = document.querySelector('#list');
+
+// event jest to wbudowany obiekt, ktory przetrzymuje informacji o wykonanym zdarzeniu
+const handleSubmit = (event) => {
+  // event.preventDefault() powoduje zatrzymanie domyslnej akcji przegladarki jaka jest wyslanie formularza.
+  event.preventDefault();
+
+  // 1. Pobranie wartosci z inputow
+  // console.log(nameInput.value)
+  // console.log(messageInput.value);
+
+  // 2. Dodanie nowego elementu do HTML
+  list.innerHTML += `
+    <li>
+      <strong> ${nameInput.value} </strong> napisal
+      <p> ${messageInput.value} </p>
+    </li>
+  `
+
+  nameInput.value = '';
+  messageInput.value = '';
 }
-inputs[0].classList.add('klasa')
 
-console.log(inputs[0].className)
+messageForm.addEventListener('submit', handleSubmit);
+
+const deletefunction = () => {
+  console.log('napis')
+  list.innerHTML = `<ul></ul>`
+
+}
+
+let deleteButton = document.querySelector('#delete')
+
+deleteButton.addEventListener("click", deletefunction)
