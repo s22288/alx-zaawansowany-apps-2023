@@ -26,3 +26,6 @@ let list = document.querySelector('ul')
 for (m of messages) {
     list.innerHTML += `<ul>${m.author}</ul>`
 }
+inputs[0].classList.add('klasa')
+
+console.log(inputs[0].className)
