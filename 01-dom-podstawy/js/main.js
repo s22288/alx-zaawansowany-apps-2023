@@ -45,7 +45,7 @@ messageForm.addEventListener('submit', handleSubmit);
 
 const deletefunction = () => {
   console.log('napis')
-  list.innerHTML = `<ul></ul>`
+  list.innerHTML = `<ul></ul>c`
 
 }
 

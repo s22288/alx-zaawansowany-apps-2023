@@ -1,0 +1,57 @@
+/* Pokemon font from Google Fonts API */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+/* Slider styling */
+.slider {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.slider img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.controls {
+  margin-top: 20px;
+}
+
+#prevId,
+#nextId {
+  background-color: #f44336;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+#prevId:hover,
+#nextId:hover {
+  background-color: #ff6659;
+}
+
+/* Pokemon styling */
+.slider h2 {
+  font-size: 24px;
+  text-transform: capitalize;
+  font-family: 'Press Start 2P', cursive;
+}
+
+.slider img[src*='squirtle'] {
+  border: 5px solid #1c75bc;
+}
+
+.slider img[src*='Bulbasaur'] {
+  border: 5px solid #6cb901;
+}
+
+.slider img[src*='Pikachu'] {
+  border: 5px solid #ffb900;
+}
