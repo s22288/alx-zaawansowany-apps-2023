@@ -16,7 +16,16 @@ const people = [
         age: 8
     }
 ]
+let old = people[0];
 
+people.forEach(
+    p => {
+        if (p.age > old.age) {
+            old = p
+        }
+    }
+)
+console.log(old)
 
 
 function getOldest(array) {
@@ -29,9 +38,10 @@ function getOldest(array) {
     }
     return oldest;
 }
-let sorted = people.sort((a, b) => a.age - b.age)
-let maxwiek = sorted[people.length - 1]
-console.log(maxwiek)
 
 let oldest = getOldest(people)
 console.log(oldest)
+
+let sorted = people.sort((a, b) => a.age - b.age)
+let maxwiek = sorted[people.length - 1]
+console.log(maxwiek)
