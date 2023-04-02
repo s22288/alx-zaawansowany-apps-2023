@@ -10,8 +10,8 @@ form.classList.add('my-form')
 
 
 let inputs = document.querySelectorAll("input")
-inputs[0].innerText = 'nowytext'
-inputs[1].innerText = 'drugi nowy text'
+inputs[0].value = "nowytext"
+inputs[1].value = "drugi nowy text"
 const messages = [
     {
         author: 'Pawel',
